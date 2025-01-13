@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cumplidos Bonitos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #fbe7c6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 50px;
+    }
+    button {
+      background-color: #ff5252;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #ff1744;
+    }
+    .cumplido {
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Recibe un cumplido bonito!</h1>
+  <button onclick="mostrarCumplido()">Apretarme</button>
+  <div class="cumplido" id="cumplido"></div>
+  <script>
+    const cumplidos = [
+      "Te amo 💖",
+      "Eres increíble 🌟",
+      "Siempre me alegras el día 🌈",
+      "Eres más fuerte de lo que crees 💪",
+      "Tu sonrisa ilumina todo 😊",
+      "Te extraño mucho 🥺",
+      "Eres muy especial 💎",
+      "Me haces feliz solo con existir ✨"
+    ];
+
+    function mostrarCumplido() {
+      const randomIndex = Math.floor(Math.random() * cumplidos.length);
+      const cumplido = cumplidos[randomIndex];
+      document.getElementById("cumplido").textContent = cumplido;
+    }
+  </script>
+</body>
+</html>
